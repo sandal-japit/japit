@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zendra-Sharing</title>
+
+    <style>
+      li {
+        font-size: 19px;
+      }
+      a {
+        color: #000;
+        text-decoration: none !important;
+      }
+
+      a:hover {
+        text-decoration: underline !important;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="container"></ul>
+
+    <script>
+      const data = [{
+        "url":"share/AKTIVATOR MICROSOFT.ZIP",
+        "file_name":"AKTIVATOR MICROSOFT.ZIP",
+        "mb_size":"1.17"
+      },
+        {
+        "url":"share/AsistenQ-Setup-1.9.2.exe",
+        "file_name":"AsistenQ-Setup-1.9.2.exe",
+        "mb_size":"92.5"
+      },
+        {
+        "url":"share/ChromeSetup.exe",
+        "file_name":"ChromeSetup.exe",
+        "mb_size":"8.02"
+      },
+        {
+        "url":"share/NetMod_x86(Latest).exe",
+        "file_name":"NetMod_x86(Latest).exe",
+        "mb_size":"32.9"
+      },
+        {
+        "url":"share/rufus-4.5p.exe",
+        "file_name":"rufus-4.5p.exe",
+        "mb_size":"1.44"
+      },
+        {
+        "url":"share/VSCodeUserSetup-x64-1.91.1.exe",
+        "file_name":"VSCodeUserSetup-x64-1.91.1.exe",
+        "mb_size":"94.9"
+      },
+      {
+        "url":"share/winrar-x64-701.exe",
+        "file_name":"winrar-x64-701.exe",
+        "mb_size":"3.76"
+      },
+      {
+        "url":"share/Operating",
+        "file_name":"Operating",
+        "mb_size":"0.00"
+      }
+    ];
+      console.log(data);
+
+      const container = document.querySelector('#container')
+      for(var row of data) {
+         const lii = document.createElement('li')
+         lii.innerHTML = `
+            <a href="${row.url}">${row.file_name} - ${row.mb_size}mb</a>
+         `
+         container.appendChild(lii)
+      }
+    </script>
+  </body>
+</html>
